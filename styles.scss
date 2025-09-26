@@ -1,0 +1,34 @@
+/* Make navbar span full width and breathe a bit */
+.navbar {
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+.navbar .container, .navbar .container-lg, .navbar .container-md,
+.navbar .container-sm, .navbar .container-xl, .navbar .container-xxl {
+  max-width: 100%;         /* no fixed center box */
+  padding-left: 2rem;      /* edge padding */
+  padding-right: 2rem;
+}
+
+/* Responsive base font size */
+html { font-size: clamp(16px, 1.1vw + 12px, 19px); }
+
+/* Headings scale nicely on large screens */
+h1, .h1 { font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3.2rem); font-weight: 700; }
+h2, .h2 { font-size: clamp(1.5rem, 1.0rem + 1.4vw, 2.4rem); }
+h3, .h3 { font-size: clamp(1.25rem, .9rem + .9vw, 1.8rem); }
+
+/* Wider content on full layout (but keep readability) */
+.page-layout-full .content {
+  max-width: 1200px;   /* adjust to taste: 1100–1400px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Optional: bigger navbar links */
+.navbar .nav-link { font-size: 1.05rem; }
+
+/* Optional: slightly larger math */
+.math { font-size: 1.02em; }

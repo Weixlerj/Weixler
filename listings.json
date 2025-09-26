@@ -1,8 +1,8 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
-      "/posts/hello-math/index.html"
+      "/posts/hello-math/blog.html"
     ]
   }
 ]

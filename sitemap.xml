@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Weixlerj.github.io/Weixler/cv.html</loc>
-    <lastmod>2025-09-26T13:35:47.351Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Weixlerj.github.io/Weixler/publications.html</loc>
+    <loc>https://jweixler.eu/blog.html</loc>
     <lastmod>2025-09-26T13:35:47.352Z</lastmod>
   </url>
   <url>
-    <loc>https://Weixlerj.github.io/Weixler/posts/hello-math/index.html</loc>
+    <loc>https://jweixler.eu/publications.html</loc>
+    <lastmod>2025-09-26T14:43:29.018Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jweixler.eu/talks.html</loc>
+    <lastmod>2025-09-26T14:38:05.380Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jweixler.eu/posts/hello-math/blog.html</loc>
     <lastmod>2025-09-26T13:35:47.352Z</lastmod>
   </url>
   <url>
-    <loc>https://Weixlerj.github.io/Weixler/index.html</loc>
-    <lastmod>2025-09-26T13:35:47.352Z</lastmod>
+    <loc>https://jweixler.eu/index.html</loc>
+    <lastmod>2025-09-26T15:22:44.141Z</lastmod>
   </url>
   <url>
-    <loc>https://Weixlerj.github.io/Weixler/about.html</loc>
+    <loc>https://jweixler.eu/cv.html</loc>
     <lastmod>2025-09-26T13:35:47.351Z</lastmod>
   </url>
 </urlset>

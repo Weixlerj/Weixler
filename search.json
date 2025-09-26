@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "Download my CV (PDF)\nShort academic bio and selected highlights can go here."
+    "text": "Welcome! This blog collects short notes, proofs, and code snippets in analysis, PDE, and mathematical physics. Newest posts appear first.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Math!\n\n\nChebyshev meets Hölder\n\n\n\n\n\nSep 26, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications.html",
@@ -14,8 +14,8 @@
     "text": "Below is a list generated from references.bib. Add your BibTeX entries there.\n\n\n\n\nReferences\n\nBarenblatt, G. I. 1952. “On Self-Similar Motions of Compressible Fluids in Porous Media.” Prikl. Mat. Mekh. 16 (6): 679–98."
   },
   {
-    "objectID": "posts/hello-math/index.html",
-    "href": "posts/hello-math/index.html",
+    "objectID": "posts/hello-math/blog.html",
+    "href": "posts/hello-math/blog.html",
     "title": "Hello, Math!",
     "section": "",
     "text": "We have the monotonicity of \\(L^p\\) norms on a probability space: if \\(p \\ge q\\), then \\(\\|f\\|_p \\le \\|f\\|_q\\).\n\n\nCode\n# a tiny numerical check\nimport numpy as np\nrng = np.random.default_rng(0)\nx = rng.standard_normal(10_000)\np, q = 4, 2\nlhs = (np.mean(np.abs(x)**p))**(1/p)\nrhs = (np.mean(np.abs(x)**q))**(1/q)\nfloat(lhs), float(rhs), lhs &lt;= rhs\n\n\n(1.3103108156125425, 0.9980968207275173, np.False_)\n\n\nA citation example Barenblatt (1952) shows how references appear. See the source of this post for details.\n\n\n\n\nReferences\n\nBarenblatt, G. I. 1952. “On Self-Similar Motions of Compressible Fluids in Porous Media.” Prikl. Mat. Mekh. 16 (6): 679–98."
@@ -23,15 +23,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Blog",
+    "title": "Research",
     "section": "",
-    "text": "Welcome! This blog collects short notes, proofs, and code snippets in analysis, PDE, and mathematical physics. Newest posts appear first.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Math!\n\n\nChebyshev meets Hölder\n\n\n\n\n\nSep 26, 2025\n\n\n\n\n\nNo matching items"
+    "text": "I’m a PhD student in applied mathematics at the CEREMADE laboratory attached to the University Paris Dauphine–PSL.\nMy research touches functional inequalities, PDE, and spectral theory.\nThe PhD is supervised by Jean Dolbeault and David Gontier.\n\nEmail: jonte.weixler (at) dauphine.psl.eu"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
     "section": "",
-    "text": "I’m a PhD student in applied mathematics at the CEREMADE laboratory attached to the University Paris Dauphine–PSL. My research touches functional inequalities, PDE, and spectral theory. The PhD is supervised by Jean Dolbeault and David Gontier.\n\nEmail: name [at] example.com\nGitHub: https://github.com/yourname\n\nThis site is built with Quarto and published on GitHub Pages."
+    "text": "Download my CV (PDF)\nShort academic bio and selected highlights can go here."
   }
 ]
