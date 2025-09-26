@@ -16,10 +16,11 @@ h3, .h3 { font-size: clamp(1.25rem, .9rem + .9vw, 1.8rem); }
 
 /* 3) Full-layout content should still be readable (max width + side padding) */
 .page-layout-full .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-inline: 2rem;
+  max-width: none;
+  margin: 0;                /* optional */
+  padding-inline: 2rem;     /* keep some gutter */
 }
+
 
 /* 4) Text rhythm */
 p { line-height: 1.7; }
@@ -43,3 +44,14 @@ img.profile { border-radius: .4rem; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
 .quarto-listing .listing .description { opacity: .9; }
 .quarto-listing .listing .metadata { opacity: .7; }
 .quarto-listing .listing .title { font-weight: 600; }
+
+/* Remove the label text AND the icon in all callouts */
+.callout .callout-title-container {
+  display: none !important;
+}
+.callout .callout-icon-container {
+  display: none !important;
+}
+
+
+

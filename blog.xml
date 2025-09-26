@@ -13,7 +13,7 @@
 <lastBuildDate>Thu, 25 Sep 2025 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Agnostische Modellierung von Werten aus der Realität</title>
-  <link>https://jweixler.eu/posts/hello-math/Agnostische Modelierung.html</link>
+  <link>https://jweixler.eu/posts/Posts/Agnostische Modelierung.html</link>
   <description><![CDATA[ 
 
 
@@ -84,7 +84,7 @@ Ein paar Beispiele sind in Abbildung @ref(fig:brownian) illustriert.</p>
 <div id="fig-brownian" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-brownian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://jweixler.eu/posts/hello-math/standard-brownian-motion-paths.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="https://jweixler.eu/posts/Posts/standard-brownian-motion-paths.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brownian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Beispiele für verschiedene stetige Funktionen, welche alle beim selben Wert starten und sich unterschiedlich in der Zeit entwickeln. Bildquelle: https://www.quantstart.com/articles/brownian-motion-simulation-with-python/
@@ -201,7 +201,7 @@ Hoffentlich sind Sie aber heute ein lebendiges Gegenbeispiel: hoffentlich haben 
  ]]></description>
   <category>Stochastik</category>
   <category>Wahrscheinlichkeit</category>
-  <guid>https://jweixler.eu/posts/hello-math/Agnostische Modelierung.html</guid>
+  <guid>https://jweixler.eu/posts/Posts/Agnostische Modelierung.html</guid>
   <pubDate>Thu, 25 Sep 2025 22:00:00 GMT</pubDate>
 </item>
 </channel>
