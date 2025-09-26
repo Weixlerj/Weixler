@@ -1,0 +1,10 @@
+---
+title: "Blog"
+page-layout: article
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+---
+
+Welcome! This blog collects short notes, proofs, and code snippets in analysis, PDE, and mathematical physics. Newest posts appear first.

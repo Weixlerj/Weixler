@@ -1,0 +1,21 @@
+---
+title: "Hello, Math!"
+description: "Chebyshev meets Hölder"
+date: 2025-09-26
+categories: [analysis, inequalities]
+---
+
+We have the monotonicity of $L^p$ norms on a probability space: if $p \ge q$, then $\|f\|_p \le \|f\|_q$.
+
+```{python}
+# a tiny numerical check
+import numpy as np
+rng = np.random.default_rng(0)
+x = rng.standard_normal(10_000)
+p, q = 4, 2
+lhs = (np.mean(np.abs(x)**p))**(1/p)
+rhs = (np.mean(np.abs(x)**q))**(1/q)
+float(lhs), float(rhs), lhs <= rhs
+```
+
+A citation example @barenblatt1952 shows how references appear. See the source of this post for details.

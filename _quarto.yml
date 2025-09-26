@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  title: "Jonte Weixler"
+  description: "Applied mathematics — functional inequalities, PDE, and notes."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
+      - href: publications.qmd
+        text: Publications
+      - href: cv.qmd
+        text: CV
+  page-footer:
+    right: "© 2025 Jonte Weixler"
+  # Uncomment and fill these to enable comments via giscus (see README in this zip)
+  # comments:
+  #   giscus:
+  #     repo: yourname/your-repo
+  #     repo-id: YOUR_REPO_ID
+  #     category: General
+  #     category-id: YOUR_CATEGORY_ID
+  #     mapping: pathname
+  #     reactions-enabled: true
+  #     input-position: bottom
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: show
+    smooth-scroll: true
+
+bibliography: references.bib
+citeproc: true

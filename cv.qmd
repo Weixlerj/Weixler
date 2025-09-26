@@ -1,0 +1,6 @@
+---
+title: "CV"
+---
+
+- [Download my CV (PDF)](cv.pdf){target="_blank"}
+- Short academic bio and selected highlights can go here.

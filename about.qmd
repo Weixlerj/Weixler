@@ -1,0 +1,10 @@
+---
+title: "About"
+---
+
+I'm a PhD student in applied mathematics at the [CEREMADE](https://www.ceremade.dauphine.fr) laboratory attached to the University Paris Dauphine--PSL. My research touches functional inequalities, PDE, and spectral theory. The PhD is supervised by [Jean Dolbeault](https://www.ceremade.dauphine.fr/~dolbeaul/) and [David Gontier](hhttps://cermics.enpc.fr/~gontierd/).
+
+- Email: name [at] example.com
+- GitHub: https://github.com/yourname
+
+This site is built with [Quarto](https://quarto.org) and published on GitHub Pages.

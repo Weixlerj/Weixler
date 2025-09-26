@@ -1,0 +1,7 @@
+---
+title: "Publications"
+nocite: |
+  @*
+---
+
+Below is a list generated from `references.bib`. Add your BibTeX entries there.

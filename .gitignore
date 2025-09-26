@@ -1,0 +1,14 @@
+# Quarto build output
+_site/
+.quarto/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Python venv and cache
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+/.quarto/
+**/*.quarto_ipynb
