@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-09-26">
-<meta name="description" content="Chebyshev meets Hölder">
 
-<title>Hello, Math! – Jonte Weixler</title>
+<title>Agnostische Modellierung von Werten aus der Realität – Jonte Weixler</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,62 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -97,7 +41,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a8976c3e89df70b272bdfba3d2fda974.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -125,7 +69,6 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -181,7 +124,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../publications.html"> 
@@ -217,29 +160,33 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#weshalb-wahrscheinlichkeit" id="toc-weshalb-wahrscheinlichkeit" class="nav-link active" data-scroll-target="#weshalb-wahrscheinlichkeit">Weshalb Wahrscheinlichkeit?</a></li>
+  <li><a href="#definitionen" id="toc-definitionen" class="nav-link" data-scroll-target="#definitionen">Definitionen</a></li>
+  <li><a href="#anwendungen-des-theorems" id="toc-anwendungen-des-theorems" class="nav-link" data-scroll-target="#anwendungen-des-theorems">Anwendungen des Theorems</a></li>
+  <li><a href="#schlussbetrachtungen" id="toc-schlussbetrachtungen" class="nav-link" data-scroll-target="#schlussbetrachtungen">Schlussbetrachtungen</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hello, Math!</h1>
+<h1 class="title">Agnostische Modellierung von Werten aus der Realität</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">analysis</div>
-    <div class="quarto-category">inequalities</div>
+    <div class="quarto-category">Stochastik</div>
+    <div class="quarto-category">Wahrscheinlichkeit</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    Chebyshev meets Hölder
-  </div>
-</div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
     <div>
@@ -257,33 +204,186 @@ window.Quarto = {
 </header>
 
 
-<p>We have the monotonicity of <span class="math inline">\(L^p\)</span> norms on a probability space: if <span class="math inline">\(p \ge q\)</span>, then <span class="math inline">\(\|f\|_p \le \|f\|_q\)</span>.</p>
-<div id="ab5fe8d7" class="cell" data-execution_count="1">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a tiny numerical check</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">0</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> rng.standard_normal(<span class="dv">10_000</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>p, q <span class="op">=</span> <span class="dv">4</span>, <span class="dv">2</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>lhs <span class="op">=</span> (np.mean(np.<span class="bu">abs</span>(x)<span class="op">**</span>p))<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>p)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>rhs <span class="op">=</span> (np.mean(np.<span class="bu">abs</span>(x)<span class="op">**</span>q))<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>q)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(lhs), <span class="bu">float</span>(rhs), lhs <span class="op">&lt;=</span> rhs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>(1.3103108156125425, 0.9980968207275173, np.False_)</code></pre>
+<p>An diesem Tag in der schönsten aller möglichen Welten beschäftigen wir uns mit Zahlen aus der Realität.<br>
+Betrachten Sie einen Aspekt der Realität, der sich gut in Zahlen übertragen lässt.<br>
+Nehmen Sie an, Sie codieren einen Aspekt der Realität in einen Wert <span class="math inline">\(X\)</span>.<br>
+Das erfordert eine Übersetzungsleistung von Ihnen.<br>
+Sie müssen auf irgendeine Art messen.<br>
+Sie könnten auch zählen, aber lassen Sie uns für diesen Blog annehmen, dass Ihre Zahl kontinuierliche Werte annimmt und nicht von ganzer Zahl zu ganzer Zahl springt. Eine Betrachtung solcher (Zähl-)Prozesse ist auch sehr fruchtbar, wird heute aber nicht unser Thema sein.</p>
+<p>Mögliche Beispiele für solche Werte:</p>
+<ul>
+<li>Position eines Staubteilchens in einem Wasserbottich.</li>
+<li>Tonlautstärke eines Radios während statischen Rauschens.</li>
+<li>Kleine Schwankungen des menschlichen Körpers während des Gehens oder Stehens aufgrund von kleinen Muskelzuckungen.</li>
+<li>etc.</li>
+</ul>
+<p>Egal, was die Zahl <span class="math inline">\(X\)</span> nun für Sie bedeutet, sie ändert sich mit der Zeit.<br>
+Heute beschäftigen wir uns mit der Frage:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
 </div>
 </div>
-<p>A citation example <span class="citation" data-cites="barenblatt1952">Barenblatt (<a href="#ref-barenblatt1952" role="doc-biblioref">1952</a>)</span> shows how references appear. See the source of this post for details.</p>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-barenblatt1952" class="csl-entry" role="listitem">
-Barenblatt, G. I. 1952. <span>“On Self-Similar Motions of Compressible Fluids in Porous Media.”</span> <em>Prikl. Mat. Mekh.</em> 16 (6): 679–98.
+<div class="callout-body-container callout-body">
+<p><strong>Wie ändert sich der Wert <span class="math inline">\(X\)</span> nun mit der Zeit?</strong></p>
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+<p>Eine allgemeine Antwort übersteigt meine Fähigkeiten.<br>
+Deshalb setzen wir uns mal mit Strukturen auseinander, welche ein Modell zur Beschreibung solcher Werte haben kann.</p>
+<hr>
+<p>Im heutigen Blogpost werde ich Ihnen ein Theorem vorstellen, welches zulässt, agnostisch auf ein sehr konkretes Modell zu schließen.<br>
+Dazu motiviere ich zunächst, warum wir über Wahrscheinlichkeiten sprechen, danach führen wir Definitionen ein, um dann die Kernaussage formulieren zu können.<br>
+Sobald diese steht, erkläre ich, wie eine Anwendung des Arguments in einer angewandten Wissenschaft funktionieren kann.<br>
+Daran werde ich illustrieren, was Mathematik den angewandten Wissenschaften unter anderem bieten kann.</p>
+<section id="weshalb-wahrscheinlichkeit" class="level2">
+<h2 class="anchored" data-anchor-id="weshalb-wahrscheinlichkeit">Weshalb Wahrscheinlichkeit?</h2>
+<p>Behalten Sie Ihren Wert aus der Realität im Kopf.<br>
+Wir möchten über die Struktur eines möglichen Modells sprechen. Da stellt sich die Frage, nach welchen grundlegenden Mustern Ihr Wert in der Realität zustande kommt.<br>
+Nehmen wir einmal an, Gott würde würfeln, wenn er die Realität erschafft. Dann müssen wir über Zufall sprechen.<br>
+Auch wenn Sie auf einer theologisch grundverschiedenen Position ausharren möchten, dann sollten wir es trotzdem tun.</p>
+<p>Weshalb? Hier sind vier Gründe:</p>
+<ol type="1">
+<li>Es ist praktisch.</li>
+<li>Es ist sehr hübsch.</li>
+<li>Sie möchten die Möglichkeit von deterministischer Natur und einer vollständig deterministischen Grundwahrheit in dem von Ihnen in Daten übersetzten Teil der Realität verteidigen? Dann müssen Sie doch trotzdem anerkennen, dass der Mensch und damit wir diese auf gar keinen Fall verstehen.<br>
+Dazu sind wir viel zu grobmotorisch veranlagt. Machste nix. Muss man sich zurückziehen. Wenn man es nicht exakt weiß, dann muss man anfangen, über Wahrscheinlichkeiten zu sprechen. Und dann sind wir auch wieder beim Zufall, dieses Mal nur mit einer anderen Herleitung.</li>
+<li>Ich kenne mich damit aus (ein bisschen).</li>
+</ol>
+<hr>
+</section>
+<section id="definitionen" class="level2">
+<h2 class="anchored" data-anchor-id="definitionen">Definitionen</h2>
+<p>Der von Ihnen aus der Realität abgemessene Wert <span class="math inline">\(X\)</span> ändert sich mit der Zeit.<br>
+Um dies zu kennzeichnen, führen wir nun den Index <span class="math inline">\(t\)</span> ein (<span class="math inline">\(t\)</span> für Zeit).<br>
+Nun bedeutet <span class="math inline">\(X_t\)</span> der Wert von Ihrer ausgewählten Messung <span class="math inline">\(X\)</span> zum Zeitpunkt <span class="math inline">\(t\)</span>.<br>
+Wir beginnen unsere Zeitrechnung sehr willkürlich mit der <span class="math inline">\(0\)</span> und nehmen an, wir kennen den Startwert <span class="math inline">\(X_0\)</span>.</p>
+<p>Für jede Zeit <span class="math inline">\(t\)</span> in der Zukunft <span class="math inline">\(t&gt;0\)</span> wird unser <span class="math inline">\(X_t\)</span> einen Wert haben.<br>
+Eine solche Zuordnung von einer Zeit <span class="math inline">\(t\)</span> zu einem Wert <span class="math inline">\(X_t\)</span> nennt man eine Funktion.<br>
+Ein Beispiel für eine solche Funktion kennen Sie aus dem Schulunterricht.<br>
+Man nennt sie auch Pfade.<br>
+Ein paar Beispiele sind in Abbildung @ref(fig:brownian) illustriert.</p>
+<div id="fig-brownian" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-brownian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="standard-brownian-motion-paths.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brownian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Beispiele für verschiedene stetige Funktionen, welche alle beim selben Wert starten und sich unterschiedlich in der Zeit entwickeln. Bildquelle: https://www.quantstart.com/articles/brownian-motion-simulation-with-python/
+</figcaption>
+</figure>
+</div>
+<p>Wir wissen, wo die Funktion <span class="math inline">\(X_t\)</span> beginnt.<br>
+Wie geht sie weiter?</p>
+<p>Egal, welchen Bezug Ihre Zahl <span class="math inline">\(X_t\)</span> nun zur Realität hat und egal, wie Ihre grundlegende Annahme über die Natur der Wirkmechanismen treffen, ist eines doch klar:<br>
+Es genau auszurechnen, wird brutal kompliziert.<br>
+Mein persönlicher Tipp deshalb: nicht versuchen!<br>
+Außer, Sie werden enorm gut bezahlt dafür.</p>
+<p>Nehmen wir einmal das erste Beispiel aus der obigen Sammlung: Um die genaue Position des Staubteilchens zu einem späteren Zeitpunkt auszurechnen, müssten Sie die Bewegungen eines jeden Wassermoleküls um das Staubteilchen herum verstehen und die Kollision zwischen Molekül und Staubteilchen für jedes einzelne berechnen.<br>
+In einem Wasserbottich sind etwa <span class="math inline">\(10^{23}\)</span> Teilchen. Das sind sehr viele.<br>
+Ich weiß nicht, wer da noch glücklich wird.<br>
+Daher treten wir nun den geordneten Rückzug an: Wir modellieren stochastisch. Anstatt exakten Aussagen treffen wir nun nur noch Aussagen über Wahrscheinlichkeiten.</p>
+<p>Jeder Zuwachs der Zahlen zwischen zwei Zeitpunkten <span class="math inline">\(t\)</span> und <span class="math inline">\(s\)</span> mit <span class="math inline">\(t&gt;s\)</span> wird notiert mit <span class="math inline">\(X_t-X_s\)</span> und ist nun zufällig.</p>
+<p>Wir nehmen jetzt zusätzlich an, dass die Funktion über die Zeit <span class="math inline">\(X_t\)</span> kontinuierlich ist.<br>
+Im Grunde genommen bedeutet das, dass der Wert <span class="math inline">\(X_t\)</span> nicht abrupt springt, während er sich in der Zeit verändert, sondern sich nur kontinuierlich bewegt.</p>
+<p>Beachten Sie, dass die bisher von uns verfolgten Überlegungen sehr agnostisch waren:</p>
+<ul>
+<li>Kein Gott wurde angenommen, weder ein würfelnder Gott noch ein sonstiger Gott (für die weitere Diskussion völlig irrelevant).</li>
+<li>Wir haben keine Annahme über den Ursprung der Zahlen getroffen. Wir haben ausschließlich angenommen, dass sie sich stetig in der Zeit verändern. Dieser Punkt schließt Zählprozesse aus.</li>
+<li>Wir haben angenommen, dass wir den Anfangspunkt kennen.</li>
+</ul>
+<p>Trotz dieser wenigen und wenig spezifischen Annahmen können wir die folgende Aussage treffen:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Es besteht eine <strong>Äquivalenz</strong> zwischen den folgenden Aussagen:</p>
+<ol type="A">
+<li><p>Für alle beliebigen Zeiten <span class="math inline">\(t,s,v,j\geq 0\)</span> mit <span class="math inline">\(t&gt;s&gt;v&gt;j\)</span> gilt, dass die Zuwächse <span class="math inline">\(X_t-X_s\)</span> und <span class="math inline">\(X_v-X_j\)</span> unabhängig voneinander sind.<br>
+Das bedeutet, dass aus der genauen Kenntnis des einen Wertes keine Information über den anderen Wert gezogen werden kann.</p></li>
+<li><p><span class="math inline">\(X_t\)</span> ist ein sogenannter Gaußprozess, genauer gesagt ist für alle <span class="math inline">\(t,s \geq 0\)</span> mit <span class="math inline">\(t&gt;s\)</span> die Wahrscheinlichkeitsverteilung des Zuwachses <span class="math inline">\(X_t-X_s\)</span> normalverteilt.<br>
+Mit anderen Worten: die Wahrscheinlichkeit, dass <span class="math inline">\(X_t-X_s\)</span> zwischen zwei Zahlen <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> liegt (<span class="math inline">\(a&lt;b\)</span>), ist [ _a^b e^{-},dx. ] Die Parameter <span class="math inline">\(\sigma(t,s)\)</span> und <span class="math inline">\(\mu(t,s)\)</span> sind gegeben durch zwei Funktionen. Die sogenannte Mittelwertsfunktion <span class="math inline">\(m(t)\)</span> ordnet jeder Zeit <span class="math inline">\(t\)</span> eine Zahl zu. Da wir bereits den Anfangswert <span class="math inline">\(X_0\)</span> kennen, so ist <span class="math inline">\(m(0)=X_0\)</span>. Dann ist <span class="math inline">\(\mu(t,s)=m(t)-m(s)\)</span>.<br>
+Darüber hinaus gibt es die Varianzfunktion <span class="math inline">\(u(t)\)</span>, welche jeder Zeit eine Varianz, also eine positive Zahl, zuordnet. Da die Unsicherheit mit der Zeit zunimmt, ist die Varianzfunktion wachsend in der Zeit. Dann ist <span class="math inline">\(\sigma(t,s)^2=u(t)-u(s)\)</span>. Beide Funktionen <span class="math inline">\(u\)</span> und <span class="math inline">\(m\)</span> sind stetig.</p></li>
+</ol>
+</div>
+</div>
+<p>Also, wenn (A) auf <span class="math inline">\(X_t\)</span> zutrifft, dann trifft auch (B) auf <span class="math inline">\(X_t\)</span> zu und vice versa. Alternativ formuliert: wenn (A) nicht auf <span class="math inline">\(X_t\)</span> zutrifft, so trifft auch (B) nicht auf <span class="math inline">\(X_t\)</span> zu und vice versa.<br>
+Man nennt eine solche Aussage über die Beziehung zweier Aussagen (A) und (B) <strong>Äquivalenz</strong> und notiert <span class="math inline">\((A) \Leftrightarrow (B)\)</span>.</p>
+<hr>
+</section>
+<section id="anwendungen-des-theorems" class="level2">
+<h2 class="anchored" data-anchor-id="anwendungen-des-theorems">Anwendungen des Theorems</h2>
+<p>Für die Anwendung machen wir es zuerst konkret und danach abstrakt.<br>
+Steigen wir ein mit dem dritten oben genannten Beispiel:<br>
+Denken Sie an die Muskelzuckungen, welche zu kleinen Schwankungen des menschlichen Körpers führen. Wenn Sie jetzt annehmen, dass die Muskelzuckungen in den nächsten 10 Sekunden nichts mit denen in den darauffolgenden 10 Sekunden zu tun haben und auch nix mit denen in einer Minute, dann können Sie ganz schön viel sagen:<br>
+Sie können einen sehr genauen Ausdruck für die Wahrscheinlichkeiten für die Position nach einer Zeit angeben.<br>
+Natürlich fehlen hier noch zwei essentielle Informationen: <span class="math inline">\(m(t)\)</span> und <span class="math inline">\(u(t)\)</span>. Diese beiden Funktionen müssen aus Messungen deduziert werden. Damit beschäftigt sich die Statistik.<br>
+Doch die Struktur der Wahrscheinlichkeiten ist vollständig geklärt.</p>
+<p>Abstrakt sieht eine Anwendung des obigen Theorems in einer angewandten Wissenschaft in etwa wie folgt aus:<br>
+Betrachte einen aus der Realität gemessenen Wert, welcher sich stetig in der Zeit ändert. Aus realitätsnahen Überlegungen kommen Sie zu dem Schluss, dass die Zuwächse dieses Wertes unabhängig voneinander sind. Durch das obige Theorem kennen Sie nun die Form der Wahrscheinlichkeitsverteilung. Weil Sie nun wissen, wie die Struktur aussieht, können Sie die fehlenden Informationen aus den Daten schätzen. Damit Sie das dann auch wirklich können, lernen Sie das in Statistik (hoffentlich).</p>
+<p>Das Argument könnte auch herumgedreht werden:<br>
+Weil eine Verteilung der obigen Struktur enorm gut zu einem aus der Realität gemessenen Wert passt, kann mit Hilfe des Theorems auf eine Unabhängigkeit der Zuwächse geschlossen werden.<br>
+Natürlich nur im Rahmen aller Unsicherheiten, die eine Auseinandersetzung mit der Realität eben so mit sich bringt.</p>
+<p>Nun noch einmal zur Wiederholung und Gewöhnung das obige Theorem in mathematischer Schreibweise:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Theorem von Paul Lévy</strong><br>
+Sei <span class="math inline">\((X_t)_{t\in [0,\infty)}\)</span> ein stochastischer Prozess mit Werten in <span class="math inline">\(\mathbb{R}\)</span>; sei <span class="math inline">\(X_0=a \in \mathbb{R}\)</span> und <span class="math inline">\(X_t\)</span> habe stetige Pfade, beides mit Wahrscheinlichkeit <span class="math inline">\(1\)</span>.<br>
+Dann besteht Äquivalenz zwischen:</p>
+<ol type="A">
+<li><p><span class="math inline">\(X\)</span> hat unabhängige Inkremente (Zuwächse).</p></li>
+<li><p><span class="math inline">\(X\)</span> ist ein Gauß-Prozess; <span class="math inline">\(X_t-X_s \overset{d}{=} N(m(t)-m(s),u(t)-u(s))\)</span> für alle <span class="math inline">\(t,s\geq 0\)</span>, <span class="math inline">\(t\geq s\)</span>; wobei <span class="math inline">\(m(t)\)</span> stetig und <span class="math inline">\(m(0)=a\)</span>; <span class="math inline">\(u(t)\)</span> monoton wachsend, stetig und <span class="math inline">\(u(0)=0\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<hr>
+</section>
+<section id="schlussbetrachtungen" class="level2">
+<h2 class="anchored" data-anchor-id="schlussbetrachtungen">Schlussbetrachtungen</h2>
+<p>Zum Schluss nun noch ein paar abschließende Kommentare:<br>
+Das obige Theorem hat absoluten Wahrheitswert.<br>
+Wenn es in der Wissenschaft wie in der Biologie angewendet wird, dann resultieren alle Unsicherheiten aus der folgenden Frage:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Erfüllt der aus der Realität abgeleitete Wert <span class="math inline">\(X_t\)</span> die im Theorem gestellten Voraussetzungen?</p>
+</div>
+</div>
+<p>Jede Beantwortung dieser Frage muss mit Mitteln der jeweiligen Wissenschaft geklärt werden und ist mit Unsicherheit behaftet.<br>
+Diese Anwendung illustriert gut, was Mathematik den angewandten Wissenschaften unter anderem bieten kann:</p>
+<p>Mathematik kann vorgefertigte Schlussfolgerungsketten bieten, welche – sind sie denn einmal verstanden und ausformuliert – durch strukturelle Einfachheit und Klarheit bestechen.<br>
+Natürlich ist es ein hoher Anspruch der Mathematik, diese Einfachheit und Allgemeingültigkeit in ihren Aussagen zu haben, und wir scheitern jeden Tag an unserer Unfähigkeit, gute Antworten zu geben.<br>
+Doch sollte man Unfähigkeit nicht zu Unwilligkeit umdeuten und behaupten, Mathematik würde sich mit sophistischen Konvergenzbeweisen beschäftigen, die am Ende niemanden interessieren.<br>
+Hoffentlich sind Sie aber heute ein lebendiges Gegenbeispiel: hoffentlich haben Sie etwas gelernt, das zugleich philosophisch interessant ist wie auch möglicherweise von praktischer Relevanz für Ihre Wissenschaft.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -371,6 +471,11 @@ Barenblatt, G. I. 1952. <span>“On Self-Similar Motions of Compressible Fluids 
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -688,13 +793,13 @@ Barenblatt, G. I. 1952. <span>“On Self-Similar Motions of Compressible Fluids 
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>© 2025 Jonte Weixler</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>© 2025 Jonte Weixler</p>
+<p><a href="https://github.com/Weixlerj">GitHub</a></p>
 </div>
   </div>
 </footer>
@@ -702,5 +807,4 @@ Barenblatt, G. I. 1952. <span>“On Self-Similar Motions of Compressible Fluids 
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

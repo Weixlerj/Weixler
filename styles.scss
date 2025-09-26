@@ -1,34 +1,45 @@
-/* Make navbar span full width and breathe a bit */
-.navbar {
-  padding-top: .6rem;
-  padding-bottom: .6rem;
-}
+/* 1) Make navbar full-width & comfortable */
 .navbar .container, .navbar .container-lg, .navbar .container-md,
 .navbar .container-sm, .navbar .container-xl, .navbar .container-xxl {
-  max-width: 100%;         /* no fixed center box */
-  padding-left: 2rem;      /* edge padding */
+  max-width: 100%;
+  padding-left: 2rem;
   padding-right: 2rem;
 }
+.navbar { padding-block: .6rem; }
+.navbar .nav-link { font-size: 1.05rem; }
 
-/* Responsive base font size */
-html { font-size: clamp(16px, 1.1vw + 12px, 19px); }
-
-/* Headings scale nicely on large screens */
+/* 2) Responsive type scale (subtle) */
+html { font-size: clamp(16px, 1.05vw + 12px, 19px); }
 h1, .h1 { font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3.2rem); font-weight: 700; }
 h2, .h2 { font-size: clamp(1.5rem, 1.0rem + 1.4vw, 2.4rem); }
 h3, .h3 { font-size: clamp(1.25rem, .9rem + .9vw, 1.8rem); }
 
-/* Wider content on full layout (but keep readability) */
+/* 3) Full-layout content should still be readable (max width + side padding) */
 .page-layout-full .content {
-  max-width: 1200px;   /* adjust to taste: 1100–1400px */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 2rem;
 }
 
-/* Optional: bigger navbar links */
-.navbar .nav-link { font-size: 1.05rem; }
+/* 4) Text rhythm */
+p { line-height: 1.7; }
+.quarto-title-block { margin-bottom: 1.2rem; }
 
-/* Optional: slightly larger math */
+/* 5) Links: clearer hover */
+a { text-decoration-thickness: .06em; text-underline-offset: .15em; }
+a:hover { text-decoration: underline; }
+
+/* 6) Math & code small boosts */
 .math { font-size: 1.02em; }
+pre code { font-size: .95em; }
+
+/* 7) Images in content: never overflow */
+img { max-width: 100%; height: auto; }
+
+/* 8) Utility for profile photo */
+img.profile { border-radius: .4rem; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+
+/* Quarto listing cards spacing & subtle borders */
+.quarto-listing .listing .description { opacity: .9; }
+.quarto-listing .listing .metadata { opacity: .7; }
+.quarto-listing .listing .title { font-weight: 600; }
